@@ -1,10 +1,15 @@
-This repo is the laziest setup of a local Kong API container and Cassandra DB backend.
-The Dockerfile contains the installation of the JWT unpacker via luarocks.
+For a local kong environment via docker-compose:
 
-Instructions:
-1. Clone this repo.
-2. Run kong.sh
-3. To kill : docker-compose kill
+To initially setup environment:
 
-Notes:
-The cassandra container may take a while to start, if your computers slow, modify kong.sh to increase 'sleep 15' as required.
+1. Run kong.sh
+2. If 1 didn't work, run "docker rm -f abdulkong && docker rm -f kong-database"
+3. Retry step 1.
+
+To kill environment:
+
+docker-compose kill
+
+To rebring up environment in future:
+
+docker-compose up
