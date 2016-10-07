@@ -39,3 +39,7 @@ mysqldatabase:
  environment:
    - MYSQL_ROOT_PASSWORD=test
  container_name: mysqldatabase
+ volumes:
+   - /home/samuel/Codes/kongdocker/mysql/my.cnf:/etc/mysql/conf.d
+#   - /home/abdul/Kong/kongdocker/mysql:/etc/mysql/conf.d
+# ignore this line samuel, was just my environment
